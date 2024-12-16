@@ -1,10 +1,10 @@
-package edu.duan.app.kanban;
+package edu.duan.app.google;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class KanBanApplicationTests {
+class SearchApplicationTests {
 
     @Test
     void contextLoads() {

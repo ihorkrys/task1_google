@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.30.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1734717074044-1" author="ihorkr">
+        <createSequence incrementBy="1" sequenceName="entry_generator_seq" startValue="100"/>
+    </changeSet>
+    <changeSet id="1734717074044-4" author="ihorkr">
+        <createTable tableName="entry">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_entry"/>
+            </column>
+            <column name="title" type="VARCHAR(256)"/>
+            <column name="short_body" type="VARCHAR(2000)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

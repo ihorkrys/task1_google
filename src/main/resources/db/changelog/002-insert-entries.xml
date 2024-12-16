@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="002-insert-entries" author="ihorkr">
+        <insert tableName="entry">
+            <column name="id" value="1"/>
+            <column name="title" value="Lorem ipsum dolor sit amet"/>
+            <column name="short_body" value="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+        </insert>
+        <insert tableName="entry">
+            <column name="id" value="2"/>
+            <column name="title" value="Second title"/>
+            <column name="short_body" value="Second short body"/>
+        </insert>
+        <insert tableName="entry">
+            <column name="id" value="3"/>
+            <column name="title" value="Задача 1"/>
+            <column name="short_body" value="Задача 1:
+
+Реализовать приложение, которое даёт поиск по некоторой базе, а-ля поисковая строка из гугла. Необходимо:
+Реализовать фронтенд и бекенд - фреймворки и языки на выбор.
+Реализовать инициализацию базы, если пустая (БД любая на выбор).
+Реализовать поисковую строку и страницу выдачи результатов - списка текстовых результатов достаточно.
+Вложить всё в докерфайлы (столько, сколько надо), и предоставить автоматический запуск в 1 команду (можно через docker compose)
+На выходе имеем поисковую строку (нечувствительный к регистру запрос LIKE из SQL - достаточен, но если ваша выбранная БД предоставляет что-то лучше - можете взять и что-то лучше)."/>
+        </insert>
+        <insert tableName="entry">
+            <column name="id" value="4"/>
+            <column name="title" value="Задача 2"/>
+            <column name="short_body" value="Задача 2: Программа должна работать - условных несколько секунд. На вход программы подаётся n любым способом (можно даже передать функцию на python). Так же, необходимо простое текстовое описание как это работает"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

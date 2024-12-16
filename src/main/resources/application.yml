@@ -1,1 +1,18 @@
-spring.application.name=KanBan
+spring:
+  application:
+    name: Search
+  datasource:
+    url: jdbc:postgresql://localhost:5432/search_app?schema=public
+    username: auto_test
+    password: secret
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: db/master.xml
+    enabled: true
+    drop-first: true
+  jpa:
+    properties:
+      hibernate:
+        ddl_auto: none
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+      show-sql: true
