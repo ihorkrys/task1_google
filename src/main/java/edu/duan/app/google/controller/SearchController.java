@@ -30,13 +30,4 @@ public class SearchController {
 
         return ResponseEntity.ok(response);
     }
-
-    @GetMapping("/all")
-    public ResponseEntity<SearchResponse> getAll() {
-        List<EntryDTO> results = searchService.performSearch("Задач");
-
-        SearchResponse response = new SearchResponse(results);
-
-        return ResponseEntity.ok(response);
-    }
 }
